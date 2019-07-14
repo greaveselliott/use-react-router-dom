@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-    library: "ReactRouterHooks",
+    library: "use-react-router-dom",
     libraryTarget: "commonjs2"
   },
   resolve: {
