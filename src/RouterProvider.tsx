@@ -5,11 +5,11 @@ import RouterContext from "./RouterContext";
 
 type Props = {
   children: React.ReactNode;
-  InjectedRouter: new () => BrowserRouter | HashRouter;
+  RouterType: HashRouter | BrowserRouter;
 };
 
-const RouterProvider = ({ children, InjectedRouter }: Props) => (
-  <InjectedRouter>
+const RouterProvider = ({ children, RouterType = HashRouter }: Props) => {
+  <RouterType>
     <Route>
       {(routeProps: undefined) => (
         <RouterContext.Provider value={routeProps}>
@@ -17,7 +17,7 @@ const RouterProvider = ({ children, InjectedRouter }: Props) => (
         </RouterContext.Provider>
       )}
     </Route>
-  </InjectedRouter>
-);
+  </RouterType>;
+};
 
 export default RouterProvider;

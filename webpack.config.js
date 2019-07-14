@@ -5,8 +5,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-    library: "use-react-router-dom",
-    libraryTarget: "commonjs2"
+    library: "UseReactRouterDom",
+    libraryTarget: "umd"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
@@ -19,5 +19,6 @@ module.exports = {
         loader: "babel-loader"
       }
     ]
-  }
+  },
+  externals: ["react", "react-router-dom"]
 };
