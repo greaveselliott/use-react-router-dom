@@ -9618,10 +9618,10 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-use-react-router-dom@^0.1.2-prerelease:
-  version "0.1.2-prerelease"
-  resolved "https://registry.yarnpkg.com/use-react-router-dom/-/use-react-router-dom-0.1.2-prerelease.tgz#e6f1727b310b95c3029ad3f937b1ceb526994124"
-  integrity sha512-GFd3JsdGFZs/8UZt0/wcXXsyA8iZlpL+HPsPOuhmemFD5ne5gwv79SkApOq4ctBKnfCxtNzaTi2bWvMLhVnzYA==
+use-react-router-dom@^0.1.3-prerelease:
+  version "0.1.3-prerelease"
+  resolved "https://registry.yarnpkg.com/use-react-router-dom/-/use-react-router-dom-0.1.3-prerelease.tgz#50cf6d444d2d241058966ff22537c681eb66458e"
+  integrity sha512-rJKK9cw6s5rIknfX0L3QCGsugbdgFR90GC9z5A505k5+UT9GmSH1BOZG9X6/rG/8tN7uxPn5ipG8wrb7oNQm8g==
   dependencies:
     "@types/react" "^16.8.23"
     "@types/react-dom" "^16.8.4"
