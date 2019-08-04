@@ -155,3 +155,11 @@ const App = () => {
 
 export default App;
 ```
+
+---
+
+#### useParams()
+
+Returns params found within the router contexts, `match.params` property.
+
+Example coming...
