@@ -1,6 +1,10 @@
-import { useMemo, useCallback } from "react";
+import { useCallback } from "react";
 import { useRouter } from "./";
 import uriTemplates, { URITemplate } from "uri-templates";
+
+type UpdateQueryOptions = {
+  replace: boolean;
+};
 
 const useNavigate = <T>(
   to: string | URITemplate,
