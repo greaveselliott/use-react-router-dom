@@ -7,10 +7,10 @@ import useForceUpdate from "use-force-update";
 import RouterContext from "./RouterContext";
 
 const useRouter = <
-  P extends { [K in keyof P]?: string } = {},
-  C extends StaticContext = StaticContext,
-  S = LocationState
->(): RouteComponentProps<P, C, S> => {
+  Param extends { [Key in keyof Param]?: string } = {},
+  Context extends StaticContext = StaticContext,
+  State = LocationState
+>(): RouteComponentProps<Param, Context, State> => {
   if (useContext === undefined) {
     throw new Error("React >= 16.7 required");
   }
@@ -19,7 +19,7 @@ const useRouter = <
 
   const routerContext = useContext<RouteComponentProps>(
     RouterContext
-  ) as RouteComponentProps<P, C, S>;
+  ) as RouteComponentProps<Param, Context, State>;
 
   if (!routerContext) {
     throw new Error(

@@ -8,7 +8,6 @@ const useNavigate = <T>(
 ): Visit<T> => {
   const { history } = useRouter();
   const { replace } = options;
-
   const template = typeof to === "string" ? uriTemplates(to) : to;
 
   const visit = useCallback(

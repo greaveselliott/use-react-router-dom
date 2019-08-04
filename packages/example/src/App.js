@@ -5,7 +5,8 @@ import { useNavigate } from "use-react-router-dom";
 import "./App.css";
 
 const App = () => {
-  const navigate = useNavigate("/gallary/{page}");
+  const navigate = useNavigate("/gallary?page={page}");
+
   return (
     <div className="App">
       <button onClick={useNavigate("/")}>Home</button>
