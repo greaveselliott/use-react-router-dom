@@ -1,6 +1,6 @@
 {
   "name": "use-react-router-dom",
-  "version": "0.2.0-prerelease",
+  "version": "0.1.0",
   "description": "Wrapper around React Router, exposing React Router functionality through React Hooks.",
   "main": "./dist/index.js",
   "types": "./types.d.ts",
