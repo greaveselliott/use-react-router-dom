@@ -131,21 +131,21 @@ export default App;
 
 ---
 
-#### useParams()
+#### useQuery()
 
 Returns a plain object containing the current URL parameters
 
 ```javascript
 import React from "react";
 import { Route } from "react-router-dom";
-import { useParam } from "use-react-router-dom";
+import { useQuery } from "use-react-router-dom";
 
 import "./App.css";
 
 const App = () => {
   const useNavigate('/books?search="The Hobbit"')
 
-  const parameters = useParam();
+  const parameters = useQuery();
   return (
     <div className="App">
       <h1>Searching for is {parameters.search}</h1>
