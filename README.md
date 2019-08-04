@@ -1,32 +1,41 @@
-[![CircleCI](https://circleci.com/gh/greaveselliott/uuid/tree/master.svg?style=svg)](https://circleci.com/gh/greaveselliott/uuid/tree/master)
+# Use React Router Dom
 
-# Web UUID JS
-
-Simple utility for generating collision resistant UUID within the web browser
+Interact with your React Router without requiring the `useRouter()` higher order component.
 
 ### Installing with NPM
 
 ```
-npm install uuid-js
+npm install use-react-router-dom
 ```
 
 ### Installing with Yarn
 
 ```
-yarn add uuid-js
+yarn add use-react-router-dom
 ```
 
 ### Example usage
 
 ```javascript
-import uuid from "web-uuid-js";
+import React from "react";
+import { Route } from "react-router-dom";
+import { useNavigate } from "use-react-router-dom";
 
-const Uuid = uuid();
-```
+import "./App.css";
 
-### Run unit tests
+const App = () => (
+  <div className="App">
+    <button onClick={useNavigate("/")}>Home</button>
+    <button onClick={useNavigate("/about")}>About</button>
+    <button onClick={useNavigate("/gallary")}>Gallary</button>
+    <button onClick={useNavigate("/contact")}>Contact</button>
 
+    <Route exact path="/" component={() => <h1>Home</h1>} />
+    <Route path="/about" component={() => <h1>About</h1>} />
+    <Route path="/gallary" component={() => <h1>Gallery</h1>} />
+    <Route path="/contact" component={() => <h1>Contact</h1>} />
+  </div>
+);
+
+export default App;
 ```
-yarn test
-```
-# react-router-hooks
