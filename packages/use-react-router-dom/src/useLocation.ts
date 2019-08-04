@@ -1,4 +1,4 @@
-import { useRouter } from ".";
+import useRouter from "./useRouter";
 import { Location } from "history";
 
 const useLocation = (): Location => {

@@ -1,21 +1,25 @@
 import { useCallback } from "react";
-import { useRouter } from "./";
+import useRouter from "./useRouter";
 import uriTemplates, { URITemplate } from "uri-templates";
 
-type UpdateQueryOptions = {
-  replace: boolean;
+type Navigation<T> = {
+  visit: Visit<T>;
 };
 
-const useNavigate = <T>(
+type UseNavigate<T> = (
   to: string | URITemplate,
-  options: UpdateQueryOptions = { replace: false }
-): Visit<T> => {
+  options?: {
+    replace: boolean;
+  }
+) => Navigation<T>;
+
+const useNavigate: UseNavigate<any> = (to, options = { replace: false }) => {
   const { history } = useRouter();
   const { replace } = options;
   const template = typeof to === "string" ? uriTemplates(to) : to;
 
   const visit = useCallback(
-    (params: T): void => {
+    (params): void => {
       const newLocation = template.fill(params as any);
 
       if (history.location.pathname === newLocation) return;
@@ -29,7 +33,7 @@ const useNavigate = <T>(
     [template, history, replace]
   );
 
-  return visit;
+  return { visit };
 };
 
 export default useNavigate;
