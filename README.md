@@ -6,7 +6,7 @@ A collection of React Hooks that let your functional React components interact w
 
 ## Getting started
 
-#### 1. Installing packages
+#### Installing packages
 
 ###### NPM
 
@@ -26,7 +26,7 @@ yarn add use-react-router-dom
 yarn add react-router react-router-dom
 ```
 
-#### 1. Encapsulate your app with one of the `react-router-dom` routers
+#### Encapsulate your app with one of the `react-router-dom` routers
 
 `<BrowserRouter>` `<HashRouter>` `<MemoryRouter>` `<StaticRouter>`
 
@@ -45,8 +45,9 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
-
-#### 3. Using useRouter
+## Available hooks
+---
+#### useRouter
 
 Calling `useRouter()` provides your functional component with access to the nearest React Routers context, exposing the `History`, `Match` and `Location` properties.
 
