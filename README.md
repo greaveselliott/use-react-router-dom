@@ -6,7 +6,7 @@ A collection of React Hooks that let your functional React components interact w
 
 ## Getting started
 
-#### Installing packages
+### Installing packages
 
 ###### NPM
 
@@ -26,7 +26,7 @@ yarn add use-react-router-dom
 yarn add react-router react-router-dom
 ```
 
-#### Encapsulate your app with one of the `react-router-dom` routers
+### Encapsulate your app with one of the `react-router-dom` routers
 
 `<BrowserRouter>` `<HashRouter>` `<MemoryRouter>` `<StaticRouter>`
 
@@ -47,7 +47,7 @@ ReactDOM.render(
 ```
 ## Available hooks
 ---
-#### useRouter
+### useRouter
 
 Calling `useRouter()` provides your functional component with access to the nearest React Routers context, exposing the `History`, `Match` and `Location` properties.
 
@@ -79,7 +79,7 @@ export default App;
 
 ---
 
-#### useNavigate( path: _String_ )
+### useNavigate( path: _String_ )
 
 Simple utility providing Memoized route updates the browser history, preventing unecessary re-renders
 
@@ -107,7 +107,7 @@ export default App;
 
 ---
 
-#### useLocation()
+### useLocation()
 
 Call `useLocation` to returns the Location property from React Router context.
 
@@ -132,7 +132,7 @@ export default App;
 
 ---
 
-#### useQuery()
+### useQuery()
 
 Returns a plain object containing the current URL parameters
 
@@ -159,7 +159,7 @@ export default App;
 
 ---
 
-#### useParams()
+### useParams()
 
 Returns params found within the router contexts, `match.params` property.
 
