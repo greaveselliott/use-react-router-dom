@@ -1,9 +1,19 @@
-import useParams from "./useRouter";
+import useParams from "./useParams";
 
 jest.mock("./useRouter", () => () => ({
-  match: "https://www.abc.com/"
+  match: {
+    params: {
+      a: 1,
+      b: 2,
+      c: 3
+    }
+  }
 }));
 
 test("Return matched URL from React Router context.", () => {
-  expect(useParams()).toEqual({ match: "https://www.abc.com/" });
+  expect(useParams()).toEqual({
+    a: 1,
+    b: 2,
+    c: 3
+  });
 });
