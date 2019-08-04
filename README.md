@@ -46,7 +46,6 @@ ReactDOM.render(
 );
 ```
 ## Available hooks
----
 ### useRouter
 
 Calling `useRouter()` provides your functional component with access to the nearest React Routers context, exposing the `History`, `Match` and `Location` properties.
