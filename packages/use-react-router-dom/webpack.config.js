@@ -20,5 +20,5 @@ module.exports = {
       }
     ]
   },
-  externals: ["react", "react-router-dom"]
+  externals: ["react", "react-dom", "react-router", "react-router-dom"]
 };
