@@ -3,7 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { Location } from "history";
 import "@testing-library/react/cleanup-after-each";
 import "@testing-library/jest-dom/extend-expect";
-import { render, act } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import { useNavigate, useLocation } from ".";
 
