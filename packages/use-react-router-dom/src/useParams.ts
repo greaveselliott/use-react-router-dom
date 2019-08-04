@@ -1,4 +1,4 @@
-import { useRouter } from ".";
+import useRouter from "./useRouter";
 
 const useParams = <T>(): T => {
   const { match } = useRouter<T>();
