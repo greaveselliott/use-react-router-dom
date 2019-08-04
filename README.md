@@ -103,3 +103,55 @@ const App = () => (
 
 export default App;
 ```
+
+---
+
+#### useLocation()
+
+Call `useLocation` to returns the Location property from React Router context.
+
+```javascript
+import React from "react";
+import { Route } from "react-router-dom";
+import { useLocation } from "use-react-router-dom";
+
+import "./App.css";
+
+const App = () => {
+  const location = useLocation();
+  return (
+    <div className="App">
+      <h1>Current location is {locaiton.pathname}</h1>
+    </div>
+  );
+};
+
+export default App;
+```
+
+---
+
+#### useParams()
+
+Returns a plain object containing the current URL parameters
+
+```javascript
+import React from "react";
+import { Route } from "react-router-dom";
+import { useParam } from "use-react-router-dom";
+
+import "./App.css";
+
+const App = () => {
+  const useNavigate('/books?search="The Hobbit"')
+
+  const parameters = useParam();
+  return (
+    <div className="App">
+      <h1>Searching for is {parameters.search}</h1>
+    </div>
+  );
+};
+
+export default App;
+```
