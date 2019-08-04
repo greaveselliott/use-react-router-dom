@@ -3,7 +3,7 @@ import { StaticContext } from "react-router";
 import { RouteComponentProps } from "react-router-dom";
 import { LocationState } from "history";
 
-import RouterContext from "./RouterContext";
+import getRouterContext from "./getRouterContext";
 
 const useRouter = <
   Param extends { [Key in keyof Param]?: string } = {},
@@ -15,7 +15,7 @@ const useRouter = <
   }
 
   const routerContext = useContext<RouteComponentProps>(
-    RouterContext
+    getRouterContext()
   ) as RouteComponentProps<Param, Context, State>;
 
   if (!routerContext) {
