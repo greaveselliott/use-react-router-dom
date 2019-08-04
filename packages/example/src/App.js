@@ -1,20 +1,18 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { useRouter } from "use-react-router-dom";
+import { useNavigate } from "use-react-router-dom";
 
 import "./App.css";
 
 const App = () => {
-  const { history } = useRouter();
-
-  console.log(history);
-
+  const navigate = useNavigate("/gallary/{page}");
   return (
     <div className="App">
-      <button onClick={() => history.push("/")}>Home</button>
-      <button onClick={() => history.push("/about")}>About</button>
-      <button onClick={() => history.push("/gallary")}>Gallary</button>
-      <button onClick={() => history.push("/contact")}>Contact</button>
+      <button onClick={useNavigate("/")}>Home</button>
+      <button onClick={useNavigate("/about")}>About</button>
+      <button onClick={() => navigate({ page: 2 })}>Gallary</button>
+      <button onClick={useNavigate("/contact")}>Contact</button>
+
       <Route exact path="/" component={() => <h1>Home</h1>} />
       <Route path="/about" component={() => <h1>About</h1>} />
       <Route path="/gallary" component={() => <h1>Gallery</h1>} />

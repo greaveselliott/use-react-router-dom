@@ -1,1 +1,216 @@
-!function(e,r){"object"==typeof exports&&"object"==typeof module?module.exports=r(require("react"),require("react-router"),require("react-router-dom")):"function"==typeof define&&define.amd?define(["react","react-router","react-router-dom"],r):"object"==typeof exports?exports.UseReactRouterDom=r(require("react"),require("react-router"),require("react-router-dom")):e.UseReactRouterDom=r(e.react,e["react-router"],e["react-router-dom"])}(window,function(e,r,t){return function(e){var r={};function t(n){if(r[n])return r[n].exports;var o=r[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}return t.m=e,t.c=r,t.d=function(e,r,n){t.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:n})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,r){if(1&r&&(e=t(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(t.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var o in e)t.d(n,o,function(r){return e[r]}.bind(null,o));return n},t.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},t.p="",t(t.s=4)}([function(r,t){r.exports=e},function(e,t){e.exports=r},function(e,r){e.exports=t},function(e,r,t){"use strict";var n=this&&this.__read||function(e,r){var t="function"==typeof Symbol&&e[Symbol.iterator];if(!t)return e;var n,o,u=t.call(e),c=[];try{for(;(void 0===r||r-- >0)&&!(n=u.next()).done;)c.push(n.value)}catch(e){o={error:e}}finally{try{n&&!n.done&&(t=u.return)&&t.call(u)}finally{if(o)throw o.error}}return c};Object.defineProperty(r,"__esModule",{value:!0});var o=t(0);r.default=function(){var e=n(o.useState(Object.create(null)),2)[1];return o.useCallback(function(){e(Object.create(null))},[e])}},function(e,r,t){"use strict";t.r(r);var n=t(1);if(!n.__RouterContext)throw new Error("useReactRouter may only be called within a <Router /> context.");var o=n.__RouterContext,u=t(0),c=t.n(u),i=t(2),a=function(e){var r=e.children;return c.a.createElement(i.HashRouter,null,c.a.createElement(i.Route,{render:function(e){return c.a.createElement(o.Provider,{value:e},r)}}))},f=t(3),l=t.n(f),d=function(){if(void 0===u.useContext)throw new Error("React >= 16.7 required");var e=l()(),r=Object(u.useContext)(o);if(!r)throw new Error("useReactRouter may only be called within a <Router /> context.");return Object(u.useEffect)(function(){return r.history.listen(e)},[r]),r};t.d(r,"RouterContext",function(){return o}),t.d(r,"RouterProvider",function(){return a}),t.d(r,"useRouter",function(){return d})}])});
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("react"), require("react-router"), require("react-router-dom"));
+	else if(typeof define === 'function' && define.amd)
+		define(["react", "react-router", "react-router-dom"], factory);
+	else if(typeof exports === 'object')
+		exports["UseReactRouterDom"] = factory(require("react"), require("react-router"), require("react-router-dom"));
+	else
+		root["UseReactRouterDom"] = factory(root["react"], root["react-router"], root["react-router-dom"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_router__, __WEBPACK_EXTERNAL_MODULE_react_router_dom__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/uri-templates/uri-templates.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/uri-templates/uri-templates.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {\n\tif (true) {\n\t\t!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?\n\t\t\t\t(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\t} else {}\n})(this, function () {\n\tvar uriTemplateGlobalModifiers = {\n\t\t\"+\": true,\n\t\t\"#\": true,\n\t\t\".\": true,\n\t\t\"/\": true,\n\t\t\";\": true,\n\t\t\"?\": true,\n\t\t\"&\": true\n\t};\n\tvar uriTemplateSuffices = {\n\t\t\"*\": true\n\t};\n\tvar urlEscapedChars = /[:/&?#]/;\n\n\tfunction notReallyPercentEncode(string) {\n\t\treturn encodeURI(string).replace(/%25[0-9][0-9]/g, function (doubleEncoded) {\n\t\t\treturn \"%\" + doubleEncoded.substring(3);\n\t\t});\n\t}\n\n\tfunction isPercentEncoded(string) {\n\t\tstring = string.replace(/%../g, '');\n\t\treturn encodeURIComponent(string) === string;\n\t}\n\n\tfunction uriTemplateSubstitution(spec) {\n\t\tvar modifier = \"\";\n\t\tif (uriTemplateGlobalModifiers[spec.charAt(0)]) {\n\t\t\tmodifier = spec.charAt(0);\n\t\t\tspec = spec.substring(1);\n\t\t}\n\t\tvar separator = \"\";\n\t\tvar prefix = \"\";\n\t\tvar shouldEscape = true;\n\t\tvar showVariables = false;\n\t\tvar trimEmptyString = false;\n\t\tif (modifier == '+') {\n\t\t\tshouldEscape = false;\n\t\t} else if (modifier == \".\") {\n\t\t\tprefix = \".\";\n\t\t\tseparator = \".\";\n\t\t} else if (modifier == \"/\") {\n\t\t\tprefix = \"/\";\n\t\t\tseparator = \"/\";\n\t\t} else if (modifier == '#') {\n\t\t\tprefix = \"#\";\n\t\t\tshouldEscape = false;\n\t\t} else if (modifier == ';') {\n\t\t\tprefix = \";\";\n\t\t\tseparator = \";\",\n\t\t\tshowVariables = true;\n\t\t\ttrimEmptyString = true;\n\t\t} else if (modifier == '?') {\n\t\t\tprefix = \"?\";\n\t\t\tseparator = \"&\",\n\t\t\tshowVariables = true;\n\t\t} else if (modifier == '&') {\n\t\t\tprefix = \"&\";\n\t\t\tseparator = \"&\",\n\t\t\tshowVariables = true;\n\t\t}\n\n\t\tvar varNames = [];\n\t\tvar varList = spec.split(\",\");\n\t\tvar varSpecs = [];\n\t\tvar varSpecMap = {};\n\t\tfor (var i = 0; i < varList.length; i++) {\n\t\t\tvar varName = varList[i];\n\t\t\tvar truncate = null;\n\t\t\tif (varName.indexOf(\":\") != -1) {\n\t\t\t\tvar parts = varName.split(\":\");\n\t\t\t\tvarName = parts[0];\n\t\t\t\ttruncate = parseInt(parts[1]);\n\t\t\t}\n\t\t\tvar suffices = {};\n\t\t\twhile (uriTemplateSuffices[varName.charAt(varName.length - 1)]) {\n\t\t\t\tsuffices[varName.charAt(varName.length - 1)] = true;\n\t\t\t\tvarName = varName.substring(0, varName.length - 1);\n\t\t\t}\n\t\t\tvar varSpec = {\n\t\t\t\ttruncate: truncate,\n\t\t\t\tname: varName,\n\t\t\t\tsuffices: suffices\n\t\t\t};\n\t\t\tvarSpecs.push(varSpec);\n\t\t\tvarSpecMap[varName] = varSpec;\n\t\t\tvarNames.push(varName);\n\t\t}\n\t\tvar subFunction = function (valueFunction) {\n\t\t\tvar result = \"\";\n\t\t\tvar startIndex = 0;\n\t\t\tfor (var i = 0; i < varSpecs.length; i++) {\n\t\t\t\tvar varSpec = varSpecs[i];\n\t\t\t\tvar value = valueFunction(varSpec.name);\n\t\t\t\tif (value == null || (Array.isArray(value) && value.length == 0) || (typeof value == 'object' && Object.keys(value).length == 0)) {\n\t\t\t\t\tstartIndex++;\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\t\t\t\tif (i == startIndex) {\n\t\t\t\t\tresult += prefix;\n\t\t\t\t} else {\n\t\t\t\t\tresult += (separator || \",\");\n\t\t\t\t}\n\t\t\t\tif (Array.isArray(value)) {\n\t\t\t\t\tif (showVariables) {\n\t\t\t\t\t\tresult += varSpec.name + \"=\";\n\t\t\t\t\t}\n\t\t\t\t\tfor (var j = 0; j < value.length; j++) {\n\t\t\t\t\t\tif (j > 0) {\n\t\t\t\t\t\t\tresult += varSpec.suffices['*'] ? (separator || \",\") : \",\";\n\t\t\t\t\t\t\tif (varSpec.suffices['*'] && showVariables) {\n\t\t\t\t\t\t\t\tresult += varSpec.name + \"=\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tresult += shouldEscape ? encodeURIComponent(value[j]).replace(/!/g, \"%21\") : notReallyPercentEncode(value[j]);\n\t\t\t\t\t}\n\t\t\t\t} else if (typeof value == \"object\") {\n\t\t\t\t\tif (showVariables && !varSpec.suffices['*']) {\n\t\t\t\t\t\tresult += varSpec.name + \"=\";\n\t\t\t\t\t}\n\t\t\t\t\tvar first = true;\n\t\t\t\t\tfor (var key in value) {\n\t\t\t\t\t\tif (!first) {\n\t\t\t\t\t\t\tresult += varSpec.suffices['*'] ? (separator || \",\") : \",\";\n\t\t\t\t\t\t}\n\t\t\t\t\t\tfirst = false;\n\t\t\t\t\t\tresult += shouldEscape ? encodeURIComponent(key).replace(/!/g, \"%21\") : notReallyPercentEncode(key);\n\t\t\t\t\t\tresult += varSpec.suffices['*'] ? '=' : \",\";\n\t\t\t\t\t\tresult += shouldEscape ? encodeURIComponent(value[key]).replace(/!/g, \"%21\") : notReallyPercentEncode(value[key]);\n\t\t\t\t\t}\n\t\t\t\t} else {\n\t\t\t\t\tif (showVariables) {\n\t\t\t\t\t\tresult += varSpec.name;\n\t\t\t\t\t\tif (!trimEmptyString || value != \"\") {\n\t\t\t\t\t\t\tresult += \"=\";\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tif (varSpec.truncate != null) {\n\t\t\t\t\t\tvalue = value.substring(0, varSpec.truncate);\n\t\t\t\t\t}\n\t\t\t\t\tresult += shouldEscape ? encodeURIComponent(value).replace(/!/g, \"%21\"): notReallyPercentEncode(value);\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn result;\n\t\t};\n\t\tvar guessFunction = function (stringValue, resultObj, strict) {\n\t\t\tif (prefix) {\n\t\t\t\tstringValue = stringValue.substring(prefix.length);\n\t\t\t}\n\t\t\tif (varSpecs.length == 1 && varSpecs[0].suffices['*']) {\n\t\t\t\tvar varSpec = varSpecs[0];\n\t\t\t\tvar varName = varSpec.name;\n\t\t\t\tvar arrayValue = varSpec.suffices['*'] ? stringValue.split(separator || \",\") : [stringValue];\n\t\t\t\tvar hasEquals = (shouldEscape && stringValue.indexOf('=') != -1);\t// There's otherwise no way to distinguish between \"{value*}\" for arrays and objects\n\t\t\t\tfor (var i = 1; i < arrayValue.length; i++) {\n\t\t\t\t\tvar stringValue = arrayValue[i];\n\t\t\t\t\tif (hasEquals && stringValue.indexOf('=') == -1) {\n\t\t\t\t\t\t// Bit of a hack - if we're expecting \"=\" for key/value pairs, and values can't contain \"=\", then assume a value has been accidentally split\n\t\t\t\t\t\tarrayValue[i - 1] += (separator || \",\") + stringValue;\n\t\t\t\t\t\tarrayValue.splice(i, 1);\n\t\t\t\t\t\ti--;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tfor (var i = 0; i < arrayValue.length; i++) {\n\t\t\t\t\tvar stringValue = arrayValue[i];\n\t\t\t\t\tif (shouldEscape && stringValue.indexOf('=') != -1) {\n\t\t\t\t\t\thasEquals = true;\n\t\t\t\t\t}\n\t\t\t\t\tvar innerArrayValue = stringValue.split(\",\");\n\t\t\t\t\tif (innerArrayValue.length == 1) {\n\t\t\t\t\t\tarrayValue[i] = innerArrayValue[0];\n\t\t\t\t\t} else {\n\t\t\t\t\t\tarrayValue[i] = innerArrayValue;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tif (showVariables || hasEquals) {\n\t\t\t\t\tvar objectValue = resultObj[varName] || {};\n\t\t\t\t\tfor (var j = 0; j < arrayValue.length; j++) {\n\t\t\t\t\t\tvar innerValue = stringValue;\n\t\t\t\t\t\tif (showVariables && !innerValue) {\n\t\t\t\t\t\t\t// The empty string isn't a valid variable, so if our value is zero-length we have nothing\n\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif (typeof arrayValue[j] == \"string\") {\n\t\t\t\t\t\t\tvar stringValue = arrayValue[j];\n\t\t\t\t\t\t\tvar innerVarName = stringValue.split(\"=\", 1)[0];\n\t\t\t\t\t\t\tvar stringValue = stringValue.substring(innerVarName.length + 1);\n\t\t\t\t\t\t\tif (shouldEscape) {\n\t\t\t\t\t\t\t\tif (strict && !isPercentEncoded(stringValue)) {\n\t\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tstringValue = decodeURIComponent(stringValue);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\tinnerValue = stringValue;\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tvar stringValue = arrayValue[j][0];\n\t\t\t\t\t\t\tvar innerVarName = stringValue.split(\"=\", 1)[0];\n\t\t\t\t\t\t\tvar stringValue = stringValue.substring(innerVarName.length + 1);\n\t\t\t\t\t\t\tif (shouldEscape) {\n\t\t\t\t\t\t\t\tif (strict && !isPercentEncoded(stringValue)) {\n\t\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tstringValue = decodeURIComponent(stringValue);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\tarrayValue[j][0] = stringValue;\n\t\t\t\t\t\t\tinnerValue = arrayValue[j];\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif (shouldEscape) {\n\t\t\t\t\t\t\tif (strict && !isPercentEncoded(innerVarName)) {\n\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\tinnerVarName = decodeURIComponent(innerVarName);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tif (objectValue[innerVarName] !== undefined) {\n\t\t\t\t\t\t\tif (Array.isArray(objectValue[innerVarName])) {\n\t\t\t\t\t\t\t\tobjectValue[innerVarName].push(innerValue);\n\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\tobjectValue[innerVarName] = [objectValue[innerVarName], innerValue];\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tobjectValue[innerVarName] = innerValue;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tif (Object.keys(objectValue).length == 1 && objectValue[varName] !== undefined) {\n\t\t\t\t\t\tresultObj[varName] = objectValue[varName];\n\t\t\t\t\t} else {\n\t\t\t\t\t\tresultObj[varName] = objectValue;\n\t\t\t\t\t}\n\t\t\t\t} else {\n\t\t\t\t\tif (shouldEscape) {\n\t\t\t\t\t\tfor (var j = 0; j < arrayValue.length; j++) {\n\t\t\t\t\t\t\tvar innerArrayValue = arrayValue[j];\n\t\t\t\t\t\t\tif (Array.isArray(innerArrayValue)) {\n\t\t\t\t\t\t\t\tfor (var k = 0; k < innerArrayValue.length; k++) {\n\t\t\t\t\t\t\t\t\tif (strict && !isPercentEncoded(innerArrayValue[k])) {\n\t\t\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tinnerArrayValue[k] = decodeURIComponent(innerArrayValue[k]);\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\tif (strict && !isPercentEncoded(innerArrayValue)) {\n\t\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tarrayValue[j] = decodeURIComponent(innerArrayValue);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tif (resultObj[varName] !== undefined) {\n\t\t\t\t\t\tif (Array.isArray(resultObj[varName])) {\n\t\t\t\t\t\t\tresultObj[varName] = resultObj[varName].concat(arrayValue);\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tresultObj[varName] = [resultObj[varName]].concat(arrayValue);\n\t\t\t\t\t\t}\n\t\t\t\t\t} else {\n\t\t\t\t\t\tif (arrayValue.length == 1 && !varSpec.suffices['*']) {\n\t\t\t\t\t\t\tresultObj[varName] = arrayValue[0];\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tresultObj[varName] = arrayValue;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tvar arrayValue = (varSpecs.length == 1) ? [stringValue] : stringValue.split(separator || \",\");\n\t\t\t\tvar specIndexMap = {};\n\t\t\t\tfor (var i = 0; i < arrayValue.length; i++) {\n\t\t\t\t\t// Try from beginning\n\t\t\t\t\tvar firstStarred = 0;\n\t\t\t\t\tfor (; firstStarred < varSpecs.length - 1 && firstStarred < i; firstStarred++) {\n\t\t\t\t\t\tif (varSpecs[firstStarred].suffices['*']) {\n\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tif (firstStarred == i) {\n\t\t\t\t\t\t// The first [i] of them have no \"*\" suffix\n\t\t\t\t\t\tspecIndexMap[i] = i;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t} else {\n\t\t\t\t\t\t// Try from the end\n\t\t\t\t\t\tfor (var lastStarred = varSpecs.length - 1; lastStarred > 0 && (varSpecs.length - lastStarred) < (arrayValue.length - i); lastStarred--) {\n\t\t\t\t\t\t\tif (varSpecs[lastStarred].suffices['*']) {\n\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tif ((varSpecs.length - lastStarred) == (arrayValue.length - i)) {\n\t\t\t\t\t\t\t// The last [length - i] of them have no \"*\" suffix\n\t\t\t\t\t\t\tspecIndexMap[i] = lastStarred;\n\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t// Just give up and use the first one\n\t\t\t\t\tspecIndexMap[i] = firstStarred;\n\t\t\t\t}\n\t\t\t\tfor (var i = 0; i < arrayValue.length; i++) {\n\t\t\t\t\tvar stringValue = arrayValue[i];\n\t\t\t\t\tif (!stringValue && showVariables) {\n\t\t\t\t\t\t// The empty string isn't a valid variable, so if our value is zero-length we have nothing\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tvar innerArrayValue = stringValue.split(\",\");\n\t\t\t\t\tvar hasEquals = false;\n\n\t\t\t\t\tif (showVariables) {\n\t\t\t\t\t\tvar stringValue = innerArrayValue[0]; // using innerArrayValue\n\t\t\t\t\t\tvar varName = stringValue.split(\"=\", 1)[0];\n\t\t\t\t\t\tvar stringValue = stringValue.substring(varName.length + 1);\n\t\t\t\t\t\tinnerArrayValue[0] = stringValue;\n\t\t\t\t\t\tvar varSpec = varSpecMap[varName] || varSpecs[0];\n\t\t\t\t\t} else {\n\t\t\t\t\t\tvar varSpec = varSpecs[specIndexMap[i]];\n\t\t\t\t\t\tvar varName = varSpec.name;\n\t\t\t\t\t}\n\n\t\t\t\t\tfor (var j = 0; j < innerArrayValue.length; j++) {\n\t\t\t\t\t\tif (shouldEscape) {\n\t\t\t\t\t\t\tif (strict && !isPercentEncoded(innerArrayValue[j])) {\n\t\t\t\t\t\t\t\treturn;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\tinnerArrayValue[j] = decodeURIComponent(innerArrayValue[j]);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tif ((showVariables || varSpec.suffices['*'])&& resultObj[varName] !== undefined) {\n\t\t\t\t\t\tif (Array.isArray(resultObj[varName])) {\n\t\t\t\t\t\t\tresultObj[varName] = resultObj[varName].concat(innerArrayValue);\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tresultObj[varName] = [resultObj[varName]].concat(innerArrayValue);\n\t\t\t\t\t\t}\n\t\t\t\t\t} else {\n\t\t\t\t\t\tif (innerArrayValue.length == 1 && !varSpec.suffices['*']) {\n\t\t\t\t\t\t\tresultObj[varName] = innerArrayValue[0];\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tresultObj[varName] = innerArrayValue;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn 1;\n\t\t};\n\t\treturn {\n\t\t\tvarNames: varNames,\n\t\t\tprefix: prefix,\n\t\t\tsubstitution: subFunction,\n\t\t\tunSubstitution: guessFunction\n\t\t};\n\t}\n\n\tfunction UriTemplate(template) {\n\t\tif (!(this instanceof UriTemplate)) {\n\t\t\treturn new UriTemplate(template);\n\t\t}\n\t\tvar parts = template.split(\"{\");\n\t\tvar textParts = [parts.shift()];\n\t\tvar prefixes = [];\n\t\tvar substitutions = [];\n\t\tvar unSubstitutions = [];\n\t\tvar varNames = [];\n\t\twhile (parts.length > 0) {\n\t\t\tvar part = parts.shift();\n\t\t\tvar spec = part.split(\"}\")[0];\n\t\t\tvar remainder = part.substring(spec.length + 1);\n\t\t\tvar funcs = uriTemplateSubstitution(spec);\n\t\t\tsubstitutions.push(funcs.substitution);\n\t\t\tunSubstitutions.push(funcs.unSubstitution);\n\t\t\tprefixes.push(funcs.prefix);\n\t\t\ttextParts.push(remainder);\n\t\t\tvarNames = varNames.concat(funcs.varNames);\n\t\t}\n\t\tthis.fill = function (valueFunction) {\n\t\t\tif (valueFunction && typeof valueFunction !== 'function') {\n\t\t\t\tvar value = valueFunction;\n\t\t\t\tvalueFunction = function (varName) {\n\t\t\t\t\treturn value[varName];\n\t\t\t\t};\n\t\t\t}\n\n\t\t\tvar result = textParts[0];\n\t\t\tfor (var i = 0; i < substitutions.length; i++) {\n\t\t\t\tvar substitution = substitutions[i];\n\t\t\t\tresult += substitution(valueFunction);\n\t\t\t\tresult += textParts[i + 1];\n\t\t\t}\n\t\t\treturn result;\n\t\t};\n\t\tthis.fromUri = function (substituted, options) {\n\t\t\toptions = options || {};\n\t\t\tvar result = {};\n\t\t\tfor (var i = 0; i < textParts.length; i++) {\n\t\t\t\tvar part = textParts[i];\n\t\t\t\tif (substituted.substring(0, part.length) !== part) {\n\t\t\t\t\treturn /*undefined*/;\n\t\t\t\t}\n\t\t\t\tsubstituted = substituted.substring(part.length);\n\t\t\t\tif (i >= textParts.length - 1) {\n\t\t\t\t\t// We've run out of input - is there any template left?\n\t\t\t\t\tif (substituted == \"\") {\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t} else {\n\t\t\t\t\t\treturn /*undefined*/;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tvar prefix = prefixes[i];\n\t\t\t\tif (prefix && substituted.substring(0, prefix.length) !== prefix) {\n\t\t\t\t\t// All values are optional - if we have a prefix and it doesn't match, move along\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\n\t\t\t\t// Find the next part to un-substitute\n\t\t\t\tvar nextPart = textParts[i + 1];\n\t\t\t\tvar offset = i;\n\t\t\t\twhile (true) {\n\t\t\t\t\tif (offset == textParts.length - 2) {\n\t\t\t\t\t\tvar endPart = substituted.substring(substituted.length - nextPart.length);\n\t\t\t\t\t\tif (endPart !== nextPart) {\n\t\t\t\t\t\t\treturn /*undefined*/;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tvar stringValue = substituted.substring(0, substituted.length - nextPart.length);\n\t\t\t\t\t\tsubstituted = endPart;\n\t\t\t\t\t} else if (nextPart) {\n\t\t\t\t\t\tvar nextPartPos = substituted.indexOf(nextPart);\n\t\t\t\t\t\tvar stringValue = substituted.substring(0, nextPartPos);\n\t\t\t\t\t\tsubstituted = substituted.substring(nextPartPos);\n\t\t\t\t\t} else if (prefixes[offset + 1]) {\n\t\t\t\t\t\tvar nextPartPos = substituted.indexOf(prefixes[offset + 1]);\n\t\t\t\t\t\tif (nextPartPos === -1) nextPartPos = substituted.length;\n\t\t\t\t\t\tvar stringValue = substituted.substring(0, nextPartPos);\n\t\t\t\t\t\tsubstituted = substituted.substring(nextPartPos);\n\t\t\t\t\t} else if (textParts.length > offset + 2) {\n\t\t\t\t\t\t// If the separator between this variable and the next is blank (with no prefix), continue onwards\n\t\t\t\t\t\toffset++;\n\t\t\t\t\t\tnextPart = textParts[offset + 1];\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t} else {\n\t\t\t\t\t\tvar stringValue = substituted;\n\t\t\t\t\t\tsubstituted = \"\";\n\t\t\t\t\t}\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t\tif (!unSubstitutions[i](stringValue, result, options.strict)) {\n\t\t\t\t\treturn /*undefined*/;\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn result;\n\t\t}\n\t\tthis.varNames = varNames;\n\t\tthis.template = template;\n\t}\n\tUriTemplate.prototype = {\n\t\ttoString: function () {\n\t\t\treturn this.template;\n\t\t},\n\t\tfillFromObject: function (obj) {\n\t\t\treturn this.fill(obj);\n\t\t},\n\t\ttest: function (uri, options) {\n\t\t\treturn !!this.fromUri(uri, options)\n\t\t}\n\t};\n\n\treturn UriTemplate;\n});\n\n\n//# sourceURL=webpack://UseReactRouterDom/./node_modules/uri-templates/uri-templates.js?");
+
+/***/ }),
+
+/***/ "./node_modules/use-force-update/use-force-update.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/use-force-update/use-force-update.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __read = (this && this.__read) || function (o, n) {\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\n    if (!m) return o;\n    var i = m.call(o), r, ar = [], e;\n    try {\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\n    }\n    catch (error) { e = { error: error }; }\n    finally {\n        try {\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\n        }\n        finally { if (e) throw e.error; }\n    }\n    return ar;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __webpack_require__(/*! react */ \"react\");\nfunction useForceUpdate() {\n    var _a = __read(react_1.useState(Object.create(null)), 2), dispatch = _a[1];\n    var memoizedDispatch = react_1.useCallback(function () {\n        dispatch(Object.create(null));\n    }, [dispatch]);\n    return memoizedDispatch;\n}\nexports.default = useForceUpdate;\n\n\n//# sourceURL=webpack://UseReactRouterDom/./node_modules/use-force-update/use-force-update.js?");
+
+/***/ }),
+
+/***/ "./src/RouterContext.ts":
+/*!******************************!*\
+  !*** ./src/RouterContext.ts ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router */ \"react-router\");\n/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_router__WEBPACK_IMPORTED_MODULE_0__);\n\n\nif (!react_router__WEBPACK_IMPORTED_MODULE_0__[\"__RouterContext\"]) {\n  throw new Error(\"useReactRouter may only be called within a <Router /> context.\");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (react_router__WEBPACK_IMPORTED_MODULE_0__[\"__RouterContext\"]);\n\n//# sourceURL=webpack://UseReactRouterDom/./src/RouterContext.ts?");
+
+/***/ }),
+
+/***/ "./src/RouterProvider.tsx":
+/*!********************************!*\
+  !*** ./src/RouterProvider.tsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _RouterContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RouterContext */ \"./src/RouterContext.ts\");\n\n\n\n\nvar RouterProvider = function RouterProvider(_ref) {\n  var children = _ref.children;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"HashRouter\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    render: function render(props) {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RouterContext__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Provider, {\n        value: props\n      }, children);\n    }\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RouterProvider);\n\n//# sourceURL=webpack://UseReactRouterDom/./src/RouterProvider.tsx?");
+
+/***/ }),
+
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/*! exports provided: RouterContext, RouterProvider, useRouter, useNavigate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _RouterContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RouterContext */ \"./src/RouterContext.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"RouterContext\", function() { return _RouterContext__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _RouterProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RouterProvider */ \"./src/RouterProvider.tsx\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"RouterProvider\", function() { return _RouterProvider__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _useRouter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useRouter */ \"./src/useRouter.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useRouter\", function() { return _useRouter__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n/* harmony import */ var _useNavigate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./useNavigate */ \"./src/useNavigate.ts\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"useNavigate\", function() { return _useNavigate__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n\n\n\n\n\n//# sourceURL=webpack://UseReactRouterDom/./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/useNavigate.ts":
+/*!****************************!*\
+  !*** ./src/useNavigate.ts ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ */ \"./src/index.ts\");\n/* harmony import */ var uri_templates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uri-templates */ \"./node_modules/uri-templates/uri-templates.js\");\n/* harmony import */ var uri_templates__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(uri_templates__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nvar useNavigate = function useNavigate(to) {\n  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {\n    replace: false\n  };\n\n  var _useRouter = Object(___WEBPACK_IMPORTED_MODULE_1__[\"useRouter\"])(),\n      history = _useRouter.history;\n\n  var replace = options.replace;\n  var template = typeof to === \"string\" ? uri_templates__WEBPACK_IMPORTED_MODULE_2___default()(to) : to;\n  var visit = Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useCallback\"])(function (params) {\n    var newLocation = template.fill(params);\n    if (history.location.pathname === newLocation) return;\n\n    if (replace) {\n      history.replace(newLocation);\n    } else {\n      history.push(newLocation);\n    }\n  }, [template, history, replace]);\n  return visit;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (useNavigate);\n\n//# sourceURL=webpack://UseReactRouterDom/./src/useNavigate.ts?");
+
+/***/ }),
+
+/***/ "./src/useRouter.ts":
+/*!**************************!*\
+  !*** ./src/useRouter.ts ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var use_force_update__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! use-force-update */ \"./node_modules/use-force-update/use-force-update.js\");\n/* harmony import */ var use_force_update__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(use_force_update__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _RouterContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RouterContext */ \"./src/RouterContext.ts\");\n\n\n\n\nvar useRouter = function useRouter() {\n  if (react__WEBPACK_IMPORTED_MODULE_0__[\"useContext\"] === undefined) {\n    throw new Error(\"React >= 16.7 required\");\n  }\n\n  var forceUpdate = use_force_update__WEBPACK_IMPORTED_MODULE_1___default()();\n  var routerContext = Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useContext\"])(_RouterContext__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\n  if (!routerContext) {\n    throw new Error(\"useReactRouter may only be called within a <Router /> context.\");\n  }\n\n  Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\n    return routerContext.history.listen(forceUpdate);\n  }, [routerContext]);\n  return routerContext;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (useRouter);\n\n//# sourceURL=webpack://UseReactRouterDom/./src/useRouter.ts?");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react__;\n\n//# sourceURL=webpack://UseReactRouterDom/external_%22react%22?");
+
+/***/ }),
+
+/***/ "react-router":
+/*!*******************************!*\
+  !*** external "react-router" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react_router__;\n\n//# sourceURL=webpack://UseReactRouterDom/external_%22react-router%22?");
+
+/***/ }),
+
+/***/ "react-router-dom":
+/*!***********************************!*\
+  !*** external "react-router-dom" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react_router_dom__;\n\n//# sourceURL=webpack://UseReactRouterDom/external_%22react-router-dom%22?");
+
+/***/ })
+
+/******/ });
+});
